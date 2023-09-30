@@ -24,12 +24,6 @@ p {
     margin-bottom: 0px;
 }
 
-.wd-kanbas-col {
-    width: 85px;
-    background-color: black;
-    margin-right: 25px;
-}
-
 .wd-kanbas-nav {
     height: 100%;
     background-color: black;
@@ -57,7 +51,7 @@ p {
     color: white;
 }
 
-.wd-kanbas-nav .nav-item .wd-selected {
+.nav-item .wd-selected {
     background-color: white;
 }
 
@@ -68,7 +62,14 @@ p {
 .wd-profile-nav-col {
     max-width: 200px;
     margin-top: 85px;
+    position: absolute; 
+    margin-left: 110px;
+}
+
+.wd-courses-page .wd-profile-nav-col {
     position: relative; 
+    margin-top: 4vw;
+    margin-left: 30px;
 }
 
 .wd-profile-col {
@@ -83,6 +84,12 @@ p {
     width: 85%;
     margin-top: 10px;
     margin-left: 115px;
+}
+
+.wd-home-title{
+    position: absolute;
+    width: 85%;
+    margin-top: 10px;
 }
 
 .wd-profile-name {
@@ -142,7 +149,6 @@ p {
 }
 
 .wd-modules-col {
-    /* margin-right: 25px; */
     position: absolute;
     margin-left: 280px;
     margin-top: 85px;
@@ -150,6 +156,10 @@ p {
     max-width: fit-content;
     font-family: 'Josefin Sans', sans-serif;
     font-family: 'Lato', sans-serif;
+}
+
+.wd-modules-col.wd-home-col {
+    margin-left: 13vw;
 }
 
 .wd-modules-col.wd-assignments {
@@ -210,4 +220,12 @@ p {
 .wd-border-div {
     border: 1px solid #ced4da;
     border-radius: 10px;
+}
+
+.wd-navbar-icon-center {
+    margin-left: 30vw;
+}
+
+.wd-courses-page .container-fluid {
+    padding-right: 0px;
 }
