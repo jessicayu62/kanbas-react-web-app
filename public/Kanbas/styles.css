@@ -24,6 +24,11 @@ p {
     margin-bottom: 0px;
 }
 
+.wd-course-icons {
+    color: #a71523;
+    padding-right: 6px;
+}
+
 .wd-kanbas-nav {
     height: 100%;
     background-color: black;
@@ -60,7 +65,6 @@ p {
 }
 
 .wd-profile-nav-col {
-    /* max-width: 200px; */
     margin-top: 85px;
     position: absolute; 
     margin-left: 110px;
@@ -70,9 +74,8 @@ p {
     position: relative; 
     margin-top: 0px;
     padding-top: 10px;
-    margin-left: 15px;
+    margin-left: 10px;
     padding-left: 20px;
-    background-color: white;
 }
 
 .wd-profile-col {
@@ -229,13 +232,8 @@ p {
     margin-left: 30vw;
 }
 
-.wd-courses-page .container-fluid {
-    padding-left: 0px;
-
-}
-
-.wd-courses-page .col-lg-1 {
-    /* width: 85px; */
+.wd-navbar-icon {
+    margin-left: 28vw;
 }
 
 .wd-courses-page .row {
@@ -246,4 +244,12 @@ p {
 .wd-courses-nav-bar {
     background-color: black;
     height: 110vh;
+}
+
+.wd-main-navbar-page .nav-link {
+    color: #a71523;
+}
+
+.wd-main-navbar-page i {
+    padding-right: 20px;
 }
