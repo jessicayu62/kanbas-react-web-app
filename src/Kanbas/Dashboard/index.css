@@ -1,0 +1,21 @@
+h1, h2, h3, p {
+    font-family: 'Lato', sans-serif;
+  }
+  
+.wd-dashboard-div {
+    width: auto;
+}
+
+.wd-dashboard-card {
+    width: 270px;
+    min-height: 300px;
+    margin: 0px 0px 30px;
+}
+
+.wd-card-text {
+    margin-bottom: 10px;
+  }
+
+  .wd-dashboard-col {
+    margin-left: 135px;
+  }

@@ -1,0 +1,22 @@
+.wd-button-group {
+    margin-left: auto;
+}
+
+.wd-rounded-borders {
+    padding: 0px 6px;
+    border-radius: 25px;
+    border: 1px solid gray;
+}
+
+.list-group .list-group-item {
+    border-radius: 0px;
+}
+
+.wd-assignment-item {
+    border-left: 4px solid green;
+}
+
+.wd-assignment-title {
+    text-decoration: none;
+    color: black;
+}

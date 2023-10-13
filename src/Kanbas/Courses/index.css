@@ -1,0 +1,27 @@
+/* .wd-home-title{
+    position: absolute;
+    width: 85%;
+    margin-top: 10px;
+} */
+
+.wd-text {
+    color: '#a71523';
+    font-family: 'Lato', sans-serif;
+}
+
+.wd-courses-col {
+    margin-left: 110px;
+}
+
+.wd-icon {
+    display: inline-block;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: "> ";
+}
+
+.breadcrumb-item.active a {
+    color: black;
+    text-decoration: none;
+}

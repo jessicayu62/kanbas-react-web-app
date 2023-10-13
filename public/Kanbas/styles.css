@@ -1,4 +1,7 @@
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
     font-family: 'Lato', sans-serif;
 }
 
@@ -7,7 +10,7 @@ h2 {
 }
 
 h3 {
-    margin-top:30px;
+    margin-top: 30px;
 }
 
 a {
@@ -66,12 +69,12 @@ p {
 
 .wd-profile-nav-col {
     margin-top: 85px;
-    position: absolute; 
+    position: absolute;
     margin-left: 110px;
 }
 
 .wd-courses-page .wd-profile-nav-col {
-    position: relative; 
+    position: relative;
     margin-top: 0px;
     padding-top: 10px;
     margin-left: 10px;
@@ -79,7 +82,7 @@ p {
 }
 
 .wd-profile-col {
-    position: absolute; 
+    position: absolute;
     margin-left: 375px;
     max-width: 100%;
     margin-top: 85px;
@@ -92,7 +95,7 @@ p {
     margin-left: 115px;
 }
 
-.wd-home-title{
+.wd-home-title {
     position: absolute;
     width: 85%;
     margin-top: 10px;
@@ -137,7 +140,7 @@ p {
 }
 
 .wd-dashboard-col {
-    position: absolute; 
+    position: absolute;
     margin-left: 130px;
 }
 
@@ -192,14 +195,14 @@ p {
 
 .wd-vertical-buttons .wd-button {
     width: 100%;
-    margin-top:2px;
+    margin-top: 2px;
     text-align: left;
 }
 
 .wd-rounded-borders {
     padding: 0px 6px;
     border-radius: 25px;
-  border: 1px solid gray;
+    border: 1px solid gray;
 }
 
 .list-group .list-group-item {
@@ -210,7 +213,8 @@ p {
     border-left: 4px solid green;
 }
 
-.wd-dashboard-card h6, p {
+.wd-dashboard-card h6,
+p {
     color: black;
 }
 

@@ -1,0 +1,15 @@
+.wd-profile-nav-col .wd-profile-nav .nav-item {
+    margin: 8px 0px;
+}
+
+.wd-profile-nav-col .wd-profile-nav .nav-item a {
+    color: #a71523;
+    padding-left: 8px;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+
+.wd-profile-nav-col .wd-profile-nav .nav-item .active {
+    border-left: 2px solid black;
+    color: black;
+}

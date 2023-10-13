@@ -1,38 +1,251 @@
-.App {
+h1, h2, h3, p {
+  font-family: 'Lato', sans-serif;
+}
+
+h2 {
+  display: inline-block;
+}
+
+h3 {
+  margin-top:30px;
+}
+
+a {
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  color: #a71523;
+}
+
+a:hover {
+  color: #a71523;
+}
+
+.wd-navbar-links {
+  font-family: 'Lato', sans-serif;
+  color: white;
+  font-size: .9rem;
+  font-weight: normal;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+  margin-bottom: 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wd-course-icons {
+  color: #a71523;
+  padding-right: 6px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.wd-kanbas-nav {
+  height: 100%;
+  background-color: black;
+  width: 85px;
+  padding: 10px 0px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: fixed;
+}
+
+.wd-kanbas-nav .nav-item {
+  background-color: black;
+  width: 85px;
+  padding: 5px 0px;
+}
+
+.nav-link:hover {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-item .wd-selected {
+  background-color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-link.wd-selected {
+  color: #a71523;
+}
+
+.wd-profile-nav-col {
+  margin-top: 85px;
+  position: absolute; 
+  margin-left: 110px;
+}
+
+.wd-courses-page .wd-profile-nav-col {
+  position: relative; 
+  margin-top: 0px;
+  padding-top: 10px;
+  margin-left: 10px;
+  padding-left: 20px;
+}
+
+.wd-profile-col {
+  position: absolute; 
+  margin-left: 375px;
+  max-width: 100%;
+  margin-top: 85px;
+}
+
+.wd-profile-title {
+  position: absolute;
+  width: 85%;
+  margin-top: 10px;
+  margin-left: 115px;
+}
+
+.wd-home-title{
+  position: absolute;
+  width: 85%;
+  margin-top: 10px;
+}
+
+.wd-profile-name {
+  margin-bottom: 30px;
+}
+
+.wd-profile-nav-col .wd-profile-nav .nav-item {
+  margin: 8px 0px;
+}
+
+.wd-profile-nav-col .wd-profile-nav .nav-item a {
+  color: #a71523;
+  padding-left: 8px;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+}
+
+.wd-profile-nav-col .wd-profile-nav .nav-item.wd-selected {
+  border-left: 2px solid black;
+}
+
+.wd-profile-nav-col .wd-profile-nav .nav-item.wd-selected a {
+  color: black;
+}
+
+.wd-button {
+  height: 40px;
+  font-family: 'Lato', sans-serif;
+  background-color: rgb(217, 217, 217);
+}
+
+.wd-button:hover {
+  background-color: rgb(217, 217, 217);
+}
+
+.wd-dashboard-card {
+  width: 270px;
+  min-height: 340px;
+  margin: 0px 0px 30px;
+}
+
+
+.wd-dashboard-col {
+  position: absolute; 
+  margin-left: 130px;
+
+}
+.wd-dashboard-div {
+  width: auto;
+}
+.wd-card-text {
+  margin-bottom: 10px;
+}
+
+.wd-modules-col {
+  position: absolute;
+  margin-left: 280px;
+  margin-top: 85px;
+  margin-right: 20px;
+  max-width: fit-content;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
+}
+
+.wd-modules-col.wd-home-col {
+  margin-left: 12vw;
+}
+
+.wd-modules-col.wd-assignments {
+  max-width: 80%;
+}
+
+.wd-modules-section {
+  margin-right: 30px;
+}
+
+.wd-button-group {
+  margin-left: auto;
+}
+
+.list-group {
+  margin-bottom: 40px;
+}
+
+.wd-vertical-buttons {
+  margin-top: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.wd-vertical-buttons .wd-button {
+  width: 100%;
+  margin-top:2px;
+  text-align: left;
+}
+
+.wd-rounded-borders {
+  padding: 0px 6px;
+  border-radius: 25px;
+border: 1px solid gray;
+}
+
+.list-group .list-group-item {
+  border-radius: 0px;
+}
+
+.wd-assignment-item {
+  border-left: 4px solid green;
+}
+
+.wd-dashboard-card h6, p {
+  color: black;
+}
+
+.wd-dashboard-card p {
+  font-size: 14px;
+  padding-bottom: 8px;
+}
+
+.wd-assignment-item h6 {
+  color: black;
+}
+
+.wd-border-div {
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+}
+
+.wd-navbar-icon-center {
+  margin-left: 30vw;
+}
+
+.wd-navbar-icon {
+  margin-left: 28vw;
+}
+
+.wd-courses-page .row {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.wd-courses-nav-bar {
+  background-color: black;
+  height: 110vh;
+}
+
+.wd-main-navbar-page .nav-link {
+  color: #a71523;
+}
+
+.wd-main-navbar-page i {
+  padding-right: 20px;
 }

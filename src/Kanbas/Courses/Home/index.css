@@ -1,0 +1,30 @@
+/* .wd-modules-col {
+    position: absolute;
+    margin-left: 280px;
+    margin-top: 85px;
+    margin-right: 20px;
+    max-width: fit-content;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
+} */
+
+
+.wd-vertical-buttons .wd-button {
+    width: 100%;
+    margin-top:2px;
+    text-align: left;
+}
+
+.wd-button {
+    height: 40px;
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(217, 217, 217);
+}
+
+.wd-button:hover {
+    background-color: rgb(217, 217, 217);
+}
+
+.wd-red-text {
+    color: #a71523;
+}

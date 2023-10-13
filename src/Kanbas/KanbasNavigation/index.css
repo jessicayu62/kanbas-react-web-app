@@ -1,0 +1,30 @@
+.wd-kanbas-nav {
+    height: 100%;
+    background-color: black;
+    width: 85px;
+    padding: 10px 0px;
+    align-items: center;
+    position: fixed;
+}
+
+.wd-kanbas-nav .nav-item {
+    background-color: black;
+    width: 85px;
+    padding: 5px 0px;
+}
+
+.wd-navbar-link {
+    color: white;
+    font-size: .9rem;
+    font-weight: normal;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+  }
+
+.wd-kanbas-nav .list-group-item.active {
+    background-color: white;
+}
+
+.wd-kanbas-nav .list-group-item.active .wd-navbar-link {
+    color: #a71523;
+}
