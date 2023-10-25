@@ -9,9 +9,9 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 
-function Courses() {
+function Courses( { courses }) {
     const { courseId } = useParams();
-    const course = db.courses.find((course) => course._id === courseId);
+    const course = courses.find((course) => course._id === courseId);
     const { pathname } = useLocation();
     const path = pathname.split("/");
     const currPath = path[path.length - 1].replace("%20", " ")

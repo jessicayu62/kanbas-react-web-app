@@ -1,12 +1,21 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import db from "../../Database";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import { useSelector, useDispatch } from "react-redux";
+import {
+    addModule,
+    deleteModule,
+    updateModule,
+    setModule,
+} from "./modulesReducer";
 
 function ModuleList() {
     const { courseId } = useParams();
-    const modules = db.modules;
+    const modules = useSelector((state) => state.modulesReducer.modules);
+    const module = useSelector((state) => state.modulesReducer.module);
+    const dispatch = useDispatch();
+
     return (
         <div className="col-xl mt-2 me-4">
             <div className="d-flex flex-column">
@@ -24,6 +33,26 @@ function ModuleList() {
                 </div>
                 <hr />
                 <ul className="list-group">
+                    <li className="list-group-item mb-4">
+                        <div className="form-group">
+                            <input type="email" value={module.name} className="form-control mb-2"
+                                onChange={(e) =>
+                                    dispatch(setModule({ ...module, name: e.target.value }))
+                                }
+                            />
+                            <textarea className="form-control mb-2"
+                                value={module.description}
+                                onChange={(e) =>
+                                    dispatch(setModule({ ...module, description: e.target.value }))
+                                }
+                                rows="3">
+                            </textarea>
+                        </div>
+                        <button type="submit" className="btn btn-danger float-end" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
+                        <button type="submit" className="btn btn-secondary float-end me-2" onClick={() => dispatch(updateModule(module))}>Update</button>
+
+                    </li>
+
                     {
                         modules
                             .filter((module) => module.course === courseId)
@@ -35,6 +64,8 @@ function ModuleList() {
                                             <div class="ms-auto p-2 hstack gap-3">
                                                 <i class="fa fa-check-circle" style={{ color: 'green' }}></i>
                                                 <i className="fa fa-plus"></i>
+                                                <button type="submit" className="btn btn-secondary btn-sm float-end" onClick={() => dispatch(setModule(module))}>Edit</button>
+                                                <button type="submit" className="btn btn-danger btn-sm float-end" onClick={() => dispatch(deleteModule(module._id))}>Delete</button>
                                                 <i class="fa fa-ellipsis-v"></i>
                                             </div>
                                         </div>
@@ -50,8 +81,7 @@ function ModuleList() {
 
                                     </li>
                                 </div>
-                            ))
-                    }
+                            ))}
                 </ul>
             </div >
         </div >
