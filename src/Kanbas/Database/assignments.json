@@ -1,14 +1,14 @@
 [
-    { "_id": "A101", "title": "Propulsion Assignment", "course": "RS101" },
-    { "_id": "A102", "title": "Combustion Analysis", "course": "RS101" },
-    { "_id": "A103", "title": "Nozzle Design Project", "course": "RS101" },
-    { "_id": "A201", "title": "Aerodynamics Quiz", "course": "RS102" },
-    { "_id": "A202", "title": "Flow Analysis", "course": "RS102" },
-    { "_id": "A203", "title": "Heating Analysis", "course": "RS102" },
-    { "_id": "A301", "title": "Structural Design Task", "course": "RS103" },
-    { "_id": "A302", "title": "Orbital Calculations", "course": "RS103" },
-    { "_id": "A303", "title": "Systems Engineering Exam", "course": "RS103" },
-    { "_id": "A401", "title": "A1 - ENV + HTML", "course": "CS104" },
-    { "_id": "A402", "title": "A2 - CSS + BOOTSTRAP", "course": "CS104" },
-    { "_id": "A403", "title": "A3 - JS + REACT", "course": "CS104" }
+    { "_id": "A101", "title": "Propulsion Assignment", "description": "Research propulsion", "points": 100, "course": "RS101" },
+    { "_id": "A102", "title": "Combustion Analysis", "description": "Analyze combustion", "points": 100, "course": "RS101" },
+    { "_id": "A103", "title": "Nozzle Design Project", "description": "Project to design nozzles", "points": 80, "course": "RS101" },
+    { "_id": "A201", "title": "Aerodynamics Quiz", "description": "Quiz on aerodynamics", "points": 100, "course": "RS102" },
+    { "_id": "A202", "title": "Flow Analysis", "description": "Analyze flow", "points": 60, "course": "RS102" },
+    { "_id": "A203", "title": "Heating Analysis", "description": "Analyze heating", "points": 75, "course": "RS102" },
+    { "_id": "A301", "title": "Structural Design Task", "description": "Design some structure", "points": 100, "course": "RS103" },
+    { "_id": "A302", "title": "Orbital Calculations", "description": "Calculate orbitals", "points": 30, "course": "RS103" },
+    { "_id": "A303", "title": "Systems Engineering Exam", "description": "Test on systems engineering", "points": 110, "course": "RS103" },
+    { "_id": "A401", "title": "A1 - ENV + HTML", "description": "Learning HTML through lab and kanbas", "points": 120, "course": "CS104" },
+    { "_id": "A402", "title": "A2 - CSS + BOOTSTRAP", "description": "Learning CSS and Bootstrap through lab and kanbas", "points": 110, "course": "CS104" },
+    { "_id": "A403", "title": "A3 - JS + REACT", "description": "Learning JS and React through lab and kanbas", "points": 130, "course": "CS104" }
   ]

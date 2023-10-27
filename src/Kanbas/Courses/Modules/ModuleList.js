@@ -35,13 +35,14 @@ function ModuleList() {
                 <ul className="list-group">
                     <li className="list-group-item mb-4">
                         <div className="form-group">
-                            <input type="email" value={module.name} className="form-control mb-2"
+                            <input type="email" value={module.name} placeholder="Module Name" className="form-control mb-2"
                                 onChange={(e) =>
                                     dispatch(setModule({ ...module, name: e.target.value }))
                                 }
                             />
                             <textarea className="form-control mb-2"
                                 value={module.description}
+                                placeholder="Module Description"
                                 onChange={(e) =>
                                     dispatch(setModule({ ...module, description: e.target.value }))
                                 }

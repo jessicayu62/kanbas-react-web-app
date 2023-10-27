@@ -9,7 +9,7 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 
-function Courses( { courses }) {
+function Courses({ courses }) {
     const { courseId } = useParams();
     const course = courses.find((course) => course._id === courseId);
     const { pathname } = useLocation();
@@ -54,6 +54,9 @@ function Courses( { courses }) {
                         <Route path="Assignments" element={<h1>Assignments</h1>} />
                         <Route
                             path="Assignments/:assignmentId"
+                            element={<AssignmentEditor />} />
+                        <Route
+                            path="Assignments/new"
                             element={<AssignmentEditor />} />
                         <Route path="Grades" element={<Grades />} />
                     </Routes>

@@ -11,13 +11,13 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
         <div className="col-lg-10 p-1 pt-2 wd-dashboard-col">
             <h1>Dashboard</h1>
             <hr />
-            <h3>Published Courses ({courses.length * 2})</h3>
+            <h3>Published Courses ({courses.length})</h3>
             <hr />
             <form className="form-inline mb-4">
-                <input value={course.name} className="form-control mr-sm-2 w-auto d-inline me-2"
+                <input value={course.name} placeholder="Course Name" className="form-control mr-sm-2 w-auto d-inline me-2"
                     onChange={(e) => setCourse({ ...course, name: e.target.value })}
                 />
-                <input value={course.number} className="form-control mr-sm-2 w-auto d-inline me-2"
+                <input value={course.number} placeholder="Course Number" className="form-control mr-sm-2 w-auto d-inline me-2"
                     onChange={(e) => setCourse({ ...course, number: e.target.value })}
                 />
                 <input value={course.startDate} className="form-control mr-sm-2 w-auto d-inline me-2" type="date"
