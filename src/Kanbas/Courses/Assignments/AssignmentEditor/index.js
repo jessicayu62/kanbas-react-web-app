@@ -4,6 +4,8 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import { addAssignment, updateAssignment } from "../assignmentsReducer";
+import { createAssignment } from "../client";
+import * as client from "../client";
 
 function AssignmentEditor() {
     const assignment = useSelector((state) => state.assignmentsReducer.assignment);
@@ -13,11 +15,23 @@ function AssignmentEditor() {
 
     const { courseId } = useParams();
     const navigate = useNavigate();
+
+    const handleUpdateAssignment = async () => {
+        const status = await client.updateAssignment(editedAssignment);
+        dispatch(updateAssignment(editedAssignment));
+    };
+
+    const handleAddAssignment = () => {
+        createAssignment(courseId, editedAssignment).then((assignment) => {
+            dispatch(addAssignment(assignment));
+        });
+    };
+
     const handleSave = () => {
         if (editedAssignment._id) {
-            dispatch(updateAssignment(editedAssignment));
+            handleUpdateAssignment();
         } else {
-            dispatch(addAssignment(editedAssignment));
+            handleAddAssignment();
         }
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };

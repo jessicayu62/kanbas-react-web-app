@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import {
     deleteAssignment,
-    selectAssignment
+    selectAssignment,
+    setAssignments
 } from "./assignmentsReducer"
+import { findAssignmentsForCourse } from "./client";
+import * as client from "./client";
 
 function Assignments() {
     const { courseId } = useParams();
-    const assignments = useSelector((state) => state.assignmentsReducer.assignments);
     const dispatch = useDispatch();
+    useEffect(() => {
+        findAssignmentsForCourse(courseId)
+            .then((assignments) =>
+                dispatch(setAssignments(assignments))
+            );
+    }, [courseId, dispatch]);
+
+    const assignments = useSelector((state) => state.assignmentsReducer.assignments);
 
     const getDate = (dateString) => {
         var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -19,6 +29,12 @@ function Assignments() {
         let date = new Date(dateString);
         return (days[date.getDay()] + ', ' + months[date.getMonth()] + ' ' + date.getDate());
     }
+
+    const handleDeleteAssignment = (assignmentId) => {
+        client.deleteAssignment(assignmentId).then((status) => {
+            dispatch(deleteAssignment(assignmentId));
+        });
+    };
 
     return (
         <div className="col-xl mt-4 me-4">
@@ -79,7 +95,7 @@ function Assignments() {
                                                 <button type="button" class="btn btn-danger btn-sm"
                                                     onClick={() => {
                                                         if (window.confirm(`Are you sure you want to delete assignment ${assignment.title}?`)) {
-                                                            dispatch(deleteAssignment(assignment._id));
+                                                            handleDeleteAssignment(assignment._id);
                                                         }
                                                     }}>
                                                     Delete

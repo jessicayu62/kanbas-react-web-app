@@ -28,7 +28,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                 />
 
                 <div className="float-end me-5">
-                    <button type="submit" className="btn btn-secondary me-2" onClick={updateCourse}>Update</button>
+                    <button type="submit" className="btn btn-secondary me-2" onClick={() => updateCourse(course)}>Update</button>
                     <button type="submit" className="btn btn-danger" onClick={addNewCourse}>Add</button>
                 </div>
             </form>
@@ -52,7 +52,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                                         }}>Edit</button>
                                         <button type="button" class="btn btn-secondary btn-sm mt-2" onClick={(event) => {
                                             event.preventDefault();
-                                            deleteCourse(course._id);
+                                            deleteCourse(course);
                                         }}
                                         >Delete</button>
                                     </div>

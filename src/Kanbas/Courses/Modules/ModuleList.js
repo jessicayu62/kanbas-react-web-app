@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
@@ -8,13 +8,41 @@ import {
     deleteModule,
     updateModule,
     setModule,
+    setModules,
 } from "./modulesReducer";
+import { findModulesForCourse, createModule } from "./client";
+import * as client from "./client";
 
 function ModuleList() {
     const { courseId } = useParams();
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        findModulesForCourse(courseId)
+            .then((modules) =>
+                dispatch(setModules(modules))
+            );
+    }, [courseId, dispatch]);
+
     const modules = useSelector((state) => state.modulesReducer.modules);
     const module = useSelector((state) => state.modulesReducer.module);
-    const dispatch = useDispatch();
+
+    const handleAddModule = () => {
+        createModule(courseId, module).then((module) => {
+            dispatch(addModule(module));
+        });
+    };
+
+    const handleDeleteModule = (moduleId) => {
+        client.deleteModule(moduleId).then((status) => {
+            dispatch(deleteModule(moduleId));
+        });
+    };
+
+    const handleUpdateModule = async () => {
+        const status = await client.updateModule(module);
+        dispatch(updateModule(module));
+    };
 
     return (
         <div className="col-xl mt-2 me-4">
@@ -49,8 +77,8 @@ function ModuleList() {
                                 rows="3">
                             </textarea>
                         </div>
-                        <button type="submit" className="btn btn-danger float-end" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
-                        <button type="submit" className="btn btn-secondary float-end me-2" onClick={() => dispatch(updateModule(module))}>Update</button>
+                        <button type="submit" className="btn btn-danger float-end" onClick={handleAddModule}>Add</button>
+                        <button type="submit" className="btn btn-secondary float-end me-2" onClick={() => handleUpdateModule(module)}>Update</button>
 
                     </li>
 
@@ -66,7 +94,7 @@ function ModuleList() {
                                                 <i class="fa fa-check-circle" style={{ color: 'green' }}></i>
                                                 <i className="fa fa-plus"></i>
                                                 <button type="submit" className="btn btn-secondary btn-sm float-end" onClick={() => dispatch(setModule(module))}>Edit</button>
-                                                <button type="submit" className="btn btn-danger btn-sm float-end" onClick={() => dispatch(deleteModule(module._id))}>Delete</button>
+                                                <button type="submit" className="btn btn-danger btn-sm float-end" onClick={() => handleDeleteModule(module._id)}>Delete</button>
                                                 <i class="fa fa-ellipsis-v"></i>
                                             </div>
                                         </div>
